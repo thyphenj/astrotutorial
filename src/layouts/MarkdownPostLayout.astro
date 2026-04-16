@@ -1,0 +1,28 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout pageTitle={frontmatter.title}>
+    <style>
+        li {
+            color: rgb(214, 152, 152);
+        }
+    </style>
+    
+    <p>
+        <ul>
+            <li>{frontmatter.description}</li>
+            <li>{frontmatter.author}</li>
+            <li>{frontmatter.pubDate.toString().slice(0, 10)}</li>
+            <li>
+                <img
+                    src={frontmatter.image.url}
+                    width="300"
+                    alt={frontmatter.image.alt}
+                />
+            </li>
+        </ul>
+    </p>
+    <slot />
+</BaseLayout>
