@@ -2,9 +2,44 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Greeting from '../components/Greeting';
 
-const pageTitle = "Home Page";
+const pageTitle = "mum and dad";
 ---
-<BaseLayout pageTitle={pageTitle}>
-  <h2>My awesome blog subtitle</h2>
-    <Greeting client:load messages={["Hi", "Hello", "Howdy", "Hey there"]} />
-</BaseLayout>
+    <title>mum and dad</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" is:inline></script>
+    <script src="/simpleLightbox.min.js" is:inline></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo|Dancing+Script">
+    <link rel="stylesheet" href="/simpleLightbox.min.css">
+</head>
+<!-- -------------------------------------------------------------------- -->
+
+<body onload=
+              "SimpleLightbox.open({items:
+            ['/img01.jpg'
+            ,'/img02.jpg'
+            ,'/img03.jpg'
+            ,'/img04.jpg'
+            ,'/img05.jpg'
+            ,'/img06.jpg'
+            ,'/img07.jpg'
+            ,'/img08.jpg'
+            ,'/img09.jpg'
+            ,'/img10.jpg']});return false;">
+<br><br><br>
+<h1 style="text-align: center">
+    <a href='#' onclick="SimpleLightbox.open({items:
+            ['/img01.jpg'
+            ,'/img02.jpg'
+            ,'/img03.jpg'
+            ,'/img04.jpg'
+            ,'/img05.jpg'
+            ,'/img06.jpg'
+            ,'/img07.jpg'
+            ,'/img08.jpg'
+            ,'/img09.jpg'
+            ,'/img10.jpg']});return false;">mum and dad's wedding</a>
+</h1>
+</body>
+
+</html>
